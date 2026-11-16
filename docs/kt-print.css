@@ -1,0 +1,44 @@
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11pt;
+  line-height: 1.45;
+  color: #111;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  page-break-after: avoid;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.75rem 0 1.25rem;
+  font-size: 10pt;
+}
+
+th,
+td {
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  page-break-inside: avoid;
+}
+
+code {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  overflow-x: auto;
+}

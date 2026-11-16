@@ -1,0 +1,49 @@
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.sidebar {
+  display: none;
+  position: sticky;
+  top: calc(var(--navbar-h) + var(--space-4));
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: end;
+  margin-bottom: var(--space-4);
+}
+
+.search {
+  flex: 1 1 14rem;
+}
+
+.mobileFilters {
+  display: inline-flex;
+}
+
+@media (min-width: 1024px) {
+  .mobileFilters {
+    display: none;
+  }
+}
+
+.sheetActions {
+  margin-top: var(--space-4);
+}

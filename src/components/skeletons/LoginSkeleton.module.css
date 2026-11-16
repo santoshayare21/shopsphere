@@ -1,0 +1,13 @@
+.wrap {
+  display: grid;
+  place-items: center;
+  min-height: 60dvh;
+}
+
+.card {
+  width: min(100%, 26rem);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}

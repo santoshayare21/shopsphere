@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.row {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .row {
+    grid-template-columns: 1.4fr 1fr 1fr auto;
+    align-items: center;
+  }
+}
+
+.id {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--text-sm);
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.total {
+  font-weight: var(--font-weight-bold);
+}

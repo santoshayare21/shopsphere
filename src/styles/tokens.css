@@ -1,0 +1,139 @@
+/**
+ * ShopSphere design tokens — Indigo Minimal, flat 2D.
+ * Breakpoints (mobile-first):
+ *   480px  large phones
+ *   768px  tablets
+ *   1024px laptops
+ *   1280px desktops
+ *   1536px large screens
+ */
+
+:root {
+  /* Spacing (4px scale) */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
+
+  /* Type scale (fluid) */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.825rem + 0.2vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.2vw, 2.5rem);
+
+  --font-sans: 'Poppins', system-ui, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Layout */
+  --container-max: 80rem;
+  --container-max-xl: 90rem;
+  --container-pad: clamp(1rem, 2.5vw, 2rem);
+  --tap-min: 44px;
+  --navbar-h: 64px;
+  --sticky-bar-h: 72px;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Elevation — single subtle shadow token */
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+
+  /* Z-index */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-dropdown: 200;
+  --z-drawer: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-progress: 600;
+
+  /* Breakpoint references (for docs / JS hooks) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
+
+/* Light theme */
+:root,
+[data-theme='light'] {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #ffffff;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-muted: #eef2ff;
+  --color-success: #16a34a;
+  --color-success-muted: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-muted: #fef3c7;
+  --color-danger: #dc2626;
+  --color-danger-muted: #fee2e2;
+  --color-focus-ring: #4f46e5;
+  --color-skeleton: #e2e8f0;
+  --color-skeleton-shine: #f8fafc;
+  --color-overlay: rgb(15 23 42 / 0.4);
+  --color-progress: #4f46e5;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --color-bg: #0b1020;
+  --color-surface: #111827;
+  --color-surface-muted: #1f2937;
+  --color-border: #1f2937;
+  --color-border-strong: #374151;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-text-inverse: #0b1020;
+  --color-accent: #818cf8;
+  --color-accent-hover: #a5b4fc;
+  --color-accent-muted: #1e1b4b;
+  --color-success: #22c55e;
+  --color-success-muted: #14532d;
+  --color-warning: #fbbf24;
+  --color-warning-muted: #78350f;
+  --color-danger: #f87171;
+  --color-danger-muted: #7f1d1d;
+  --color-focus-ring: #818cf8;
+  --color-skeleton: #1f2937;
+  --color-skeleton-shine: #374151;
+  --color-overlay: rgb(0 0 0 / 0.55);
+  --color-progress: #818cf8;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --container-max: var(--container-max-xl);
+  }
+}

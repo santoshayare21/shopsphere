@@ -1,0 +1,26 @@
+.wrap {
+  display: grid;
+  place-items: center;
+  min-height: 60dvh;
+}
+
+.card {
+  width: min(100%, 26rem);
+  padding: var(--space-6);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hint {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.hint a {
+  color: var(--color-accent);
+}

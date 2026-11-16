@@ -1,0 +1,18 @@
+.root {
+  height: var(--navbar-h);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}

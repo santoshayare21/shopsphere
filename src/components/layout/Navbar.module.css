@@ -1,0 +1,124 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  height: var(--navbar-h);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-right: auto;
+  min-height: var(--tap-min);
+  display: inline-flex;
+  align-items: center;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileOnly {
+    display: none;
+  }
+}
+
+.link {
+  min-height: var(--tap-min);
+  padding-inline: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  transition: background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.link:hover,
+.linkActive {
+  color: var(--color-text);
+  background: var(--color-surface-muted);
+}
+
+.searchDesktop {
+  display: none;
+  width: min(18rem, 28vw);
+}
+
+@media (min-width: 1024px) {
+  .searchDesktop {
+    display: block;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.badgeWrap {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding-inline: 0.25rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.menuList a {
+  min-height: var(--tap-min);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.menuList a:hover {
+  background: var(--color-surface-muted);
+}
+
+.searchSheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
