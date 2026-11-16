@@ -29,13 +29,15 @@ export default function ProductDetailPage() {
   const toast = useToast()
   const { toggle, wishIds } = useWishlistAction()
 
-  const { data: product, isLoading, isError, refetch } = useGetProductByIdQuery(id)
-  const showSkeleton = useDelayedFlag(isLoading)
+  const { data: product, isLoading, isFetching, isError, refetch } =
+    useGetProductByIdQuery(id)
+  const showSkeleton = useDelayedFlag(isLoading || (isFetching && !product))
 
-  if (showSkeleton) {
+  // Keep skeleton/empty loading UI while fetching so !product never flashes as an error.
+  if (isLoading || (isFetching && !product)) {
     return (
       <div className="container">
-        <ProductDetailSkeleton />
+        {showSkeleton ? <ProductDetailSkeleton /> : null}
       </div>
     )
   }

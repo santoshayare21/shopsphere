@@ -34,7 +34,6 @@ export default function HomePage() {
     },
   )
 
-  const showCatSkeleton = useDelayedFlag(categoriesQuery.isLoading)
   const showProdSkeleton = useDelayedFlag(productsQuery.isLoading)
 
   return (
@@ -63,10 +62,16 @@ export default function HomePage() {
         </h2>
         {categoriesQuery.isError ? (
           <ErrorState onRetry={categoriesQuery.refetch} />
-        ) : showCatSkeleton ? (
-          <div className={styles.categories}>
+        ) : categoriesQuery.isLoading ? (
+          <div className={styles.categories} aria-busy="true" aria-label="Loading categories">
             {Array.from({ length: 8 }, (_, i) => (
-              <Skeleton key={i} className={styles.categorySkeleton} />
+              <Skeleton
+                key={i}
+                width="6.5rem"
+                height="2.75rem"
+                radius="8px"
+                className={styles.categorySkeleton}
+              />
             ))}
           </div>
         ) : (
@@ -94,8 +99,8 @@ export default function HomePage() {
         </h2>
         {productsQuery.isError ? (
           <ErrorState onRetry={productsQuery.refetch} />
-        ) : showProdSkeleton ? (
-          <ProductGridSkeleton count={10} />
+        ) : productsQuery.isLoading ? (
+          showProdSkeleton ? <ProductGridSkeleton count={10} /> : null
         ) : (
           <ProductGrid products={productsQuery.products} />
         )}
